@@ -320,6 +320,7 @@ class WidgetFactory {
 
   /// Builds [RichText].
   Widget? buildText(BuildMetadata meta, TextStyleHtml tsh, InlineSpan text) =>
+    _widget!.renderTextCustom != null ? _widget!.renderTextCustom!(text) as Widget : 
       RichText(
         maxLines: meta.maxLines > 0 ? meta.maxLines : null,
         overflow: meta.overflow,

@@ -90,6 +90,8 @@ class HtmlWidget extends StatefulWidget {
   /// The default styling for text elements.
   final TextStyle? textStyle;
 
+  final Function? renderTextCustom;
+
   /// Creates a widget that builds Flutter widget tree from html.
   ///
   /// The [html] argument must not be null.
@@ -109,6 +111,7 @@ class HtmlWidget extends StatefulWidget {
     RebuildTriggers? rebuildTriggers,
     this.renderMode = RenderMode.column,
     this.textStyle,
+    this.renderTextCustom
   })  : _rebuildTriggers = rebuildTriggers,
         super(key: key);
 
